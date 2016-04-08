@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419" name="Debug" parent="cdt.managedbuild.config.gnu.cygwin.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419." name="/" resourcePath="">
+						<toolChain id="org.eclipse.cdt.msvc.toolchain.dll.debug.1100320494" name="Microsoft Visual C++" superClass="org.eclipse.cdt.msvc.toolchain.dll.debug">
+							<targetPlatform id="org.eclipse.cdt.msvc.targetPlatform.dll.debug.418668123" superClass="org.eclipse.cdt.msvc.targetPlatform.dll.debug"/>
+							<builder buildPath="${workspace_loc:/GoogleMockStudy}/Debug" id="org.eclipse.cdt.msvc.builder.265801375" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="org.eclipse.cdt.msvc.builder"/>
+							<tool id="org.eclipse.cdt.msvc.cl.c.dll.debug.1447583356" name="C Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.c.dll.debug">
+								<option id="org.eclipse.cdt.msvc.cl.option.optimization.847073604" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
+								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.1992158989" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
+								<inputType id="org.eclipse.cdt.msvc.cl.inputType.c.1932574771" superClass="org.eclipse.cdt.msvc.cl.inputType.c"/>
+							</tool>
+							<tool id="org.eclipse.cdt.msvc.cl.dll.debug.70109555" name="C++ Compiler (cl)" superClass="org.eclipse.cdt.msvc.cl.dll.debug">
+								<option id="org.eclipse.cdt.msvc.cl.option.includes.405666052" name="Include Path (/I)" superClass="org.eclipse.cdt.msvc.cl.option.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GoogleMockStudy/gmock-1.7.0/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GoogleMockStudy/gmock-1.7.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GoogleMockStudy/gmock-1.7.0/gtest}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/GoogleMockStudy/gmock-1.7.0/gtest/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Include&quot;"/>
+								</option>
+								<option id="org.eclipse.cdt.msvc.cl.option.optimization.45834231" name="Optimization" superClass="org.eclipse.cdt.msvc.cl.option.optimization" value="org.eclipse.cdt.msvc.cl.option.optimization.default" valueType="enumerated"/>
+								<option id="org.eclipse.cdt.msvc.cl.option.debugFormat.1476490865" name="Debug Information Format" superClass="org.eclipse.cdt.msvc.cl.option.debugFormat" value="org.eclipse.cdt.msvc.cl.option.debugFormat.complete" valueType="enumerated"/>
+								<inputType id="org.eclipse.cdt.msvc.cl.inputType.2063813819" superClass="org.eclipse.cdt.msvc.cl.inputType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.msvc.rc.dll.debug.1403334911" name="Resource Compiler (rc)" superClass="org.eclipse.cdt.msvc.rc.dll.debug">
+								<inputType id="org.eclipse.cdt.msvc.rc.inputType.1599019964" superClass="org.eclipse.cdt.msvc.rc.inputType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.msvc.link.dll.debug.1038078458" name="Linker (link)" superClass="org.eclipse.cdt.msvc.link.dll.debug">
+								<option id="org.eclipse.cdt.msvc.link.option.debug.1248337155" name="Generate Debug Info (/debug)" superClass="org.eclipse.cdt.msvc.link.option.debug" value="true" valueType="boolean"/>
+								<option id="org.eclipse.cdt.msvc.link.option.libraries.2027345166" name="Libraries" superClass="org.eclipse.cdt.msvc.link.option.libraries" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;'C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\Kernel32.Lib'&quot;"/>
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="&quot;'C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib\uuid.lib'&quot;"/>
+								</option>
+								<inputType id="org.eclipse.cdt.msvc.link.inputType.1775404637" superClass="org.eclipse.cdt.msvc.link.inputType"/>
+							</tool>
+							<tool id="org.eclipse.cdt.msvc.lib.1365913266" name="Library Manager (lib)" superClass="org.eclipse.cdt.msvc.lib"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="GoogleMockStudy.cdt.managedbuild.target.gnu.cygwin.exe.1953715686" name="Executable" projectType="cdt.managedbuild.target.gnu.cygwin.exe"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419;cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.1479473038;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1134606738">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419;cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419.;cdt.managedbuild.tool.gnu.cpp.compiler.base.993264137;cdt.managedbuild.tool.gnu.cpp.compiler.input.782469725">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419;cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.exe.debug.864892238;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.586121284">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419;cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419.;cdt.managedbuild.tool.gnu.c.compiler.base.298939450;cdt.managedbuild.tool.gnu.c.compiler.input.1663419132">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419;cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419.;org.eclipse.cdt.msvc.cl.c.dll.debug.1447583356;org.eclipse.cdt.msvc.cl.inputType.c.1932574771">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.msw.build.clScannerInfo"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419;cdt.managedbuild.config.gnu.cygwin.exe.debug.2065485419.;org.eclipse.cdt.msvc.cl.dll.debug.70109555;org.eclipse.cdt.msvc.cl.inputType.2063813819">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.msw.build.clScannerInfo"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373" name="Debug" parent="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug">
+					<folderInfo id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cygwin.base.162495939" name="Cygwin GCC" superClass="cdt.managedbuild.toolchain.gnu.cygwin.base">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.Cygwin_PE" id="cdt.managedbuild.target.gnu.platform.cygwin.base.1036992977" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.cygwin.base"/>
+							<builder buildPath="${workspace_loc:/CustomIterator}/Debug" id="cdt.managedbuild.target.gnu.builder.cygwin.base.1065455272" name="Gnu Make Builder.Debug" superClass="cdt.managedbuild.target.gnu.builder.cygwin.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.assembler.cygwin.base.1584099149" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.cygwin.base">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1074942671" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.cygwin.base.1682416285" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.cygwin.base"/>
+							<tool command="g++ -std=c++11" id="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.358104787" name="Cygwin C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base">
+								<option id="gnu.cpp.compiler.option.optimization.level.1663404237" superClass="gnu.cpp.compiler.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.1706759502" superClass="gnu.cpp.compiler.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1636459565" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1348420730" name="Cygwin C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.cygwin.base">
+								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1755477564" superClass="gnu.c.compiler.option.optimization.level" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.960971608" superClass="gnu.c.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1570084255" superClass="cdt.managedbuild.tool.gnu.c.compiler.input.cygwin"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.cygwin.base.673369983" name="Cygwin C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.cygwin.base"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base.473145530" name="Cygwin C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.165458207" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.Cygwin_PE" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459" name="Release" parent="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release">
+					<folderInfo id="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.llvm.gnu.win32.cygwin.exe.release.644832414" name="LLVM with GCC (Windows) (Cygwin)" superClass="cdt.managedbuild.toolchain.llvm.gnu.win32.cygwin.exe.release">
+							<targetPlatform archList="all" id="cdt.managedbuild.target.llvm.gnu.win32.cygwin.platform.exe.release.1062500245" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.llvm.gnu.win32.cygwin.platform.exe.release"/>
+							<builder buildPath="${workspace_loc:/CustomIterator}/Release" id="cdt.managedbuild.target.llvm.gnu.win32.cygwin.builder.exe.release.1724443846" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="cdt.managedbuild.target.llvm.gnu.win32.cygwin.builder.exe.release"/>
+							<tool id="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.assembler.exe.release.1827872574" name="LLVM assembler" superClass="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.assembler.exe.release"/>
+							<tool id="cdt.managedbuild.tool.llvm.archiver.base.672847077" name="LLVM archiver" superClass="cdt.managedbuild.tool.llvm.archiver.base"/>
+							<tool id="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.c.compiler.exe.release.770484947" name="LLVM GCC" superClass="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.c.compiler.exe.release">
+								<option id="llvm.c_cpp.compiler.option.optimization.level.1349310363" name="Optimization Level" superClass="llvm.c_cpp.compiler.option.optimization.level" value="llvm.c_cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="llvm.c_cpp.compiler.option.debugging.level.525504942" name="Debug Level" superClass="llvm.c_cpp.compiler.option.debugging.level" value="llvm.c_cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.llvm.gcc.compiler.input.1288352103" superClass="cdt.managedbuild.tool.llvm.gcc.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.cpp.compiler.exe.release.444236582" name="LLVM G++" superClass="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.cpp.compiler.exe.release">
+								<option id="llvm.c_cpp.compiler.option.optimization.level.1455483192" name="Optimization Level" superClass="llvm.c_cpp.compiler.option.optimization.level" value="llvm.c_cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="llvm.c_cpp.compiler.option.debugging.level.731324571" name="Debug Level" superClass="llvm.c_cpp.compiler.option.debugging.level" value="llvm.c_cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<inputType id="cdt.managedbuild.tool.llvm.g++.compiler.input.1213060843" superClass="cdt.managedbuild.tool.llvm.g++.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.c.linker.exe.release.454824829" name="LLVM GNU C linker" superClass="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.c.linker.exe.release">
+								<option defaultValue="false" id="llvm.c.link.option.nativeCBackEnd.1415247529" name="Create native binary (with C backend code generator)" superClass="llvm.c.link.option.nativeCBackEnd" valueType="boolean"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.cpp.linker.exe.release.289888129" name="LLVM GNU C++ linker" superClass="cdt.managedbuild.tool.llvm.gnu.win32.cygwin.cpp.linker.exe.release">
+								<option defaultValue="false" id="llvm.c.link.option.nativeCBackEnd.1511578988" name="Create native binary (with C backend code generator)" superClass="llvm.c.link.option.nativeCBackEnd" valueType="boolean"/>
+								<inputType id="cdt.managedbuild.tool.llvm.c.linker.input.1002607452" superClass="cdt.managedbuild.tool.llvm.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="CustomIterator.cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.1233698160" name="Executable" projectType="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373;cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.358104787;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1636459565">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459;cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459.;cdt.managedbuild.tool.llvm.gnu.win32.cygwin.cpp.compiler.exe.release.444236582;cdt.managedbuild.tool.llvm.g++.compiler.input.1213060843">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.llvm.ui.LLVMManagedMakePerProjectProfileLLVMG++"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373;cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1348420730;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1570084255">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459;cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.release.318942459.;cdt.managedbuild.tool.llvm.gnu.win32.cygwin.c.compiler.exe.release.770484947;cdt.managedbuild.tool.llvm.gcc.compiler.input.1288352103">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.llvm.ui.LLVMManagedMakePerProjectProfileLLVMGCC"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373;cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373.;cdt.managedbuild.tool.llvm.gnu.win32.cygwin.cpp.compiler.exe.debug.1804534218;cdt.managedbuild.tool.llvm.g++.compiler.input.78361949">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.llvm.ui.LLVMManagedMakePerProjectProfileLLVMG++"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373;cdt.managedbuild.config.llvm.gnu.win32.cygwin.exe.debug.435529373.;cdt.managedbuild.tool.llvm.gnu.win32.cygwin.c.compiler.exe.debug.649961002;cdt.managedbuild.tool.llvm.gcc.compiler.input.2078967291">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.managedbuilder.llvm.ui.LLVMManagedMakePerProjectProfileLLVMGCC"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>
