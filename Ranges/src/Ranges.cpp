@@ -17,14 +17,21 @@ using namespace std;
 /**
  * Stream as a collection holder
  */
-class Stream {
-	vector<int> v;
+template <class T>
+class BaseStream {
+	vector<T> v;
 public:
-	Stream(vector<int> v) : v(v) {}
-	vector<int> eval() {
-		return v;
+	BaseStream(const vector<T> &v) : v(v) {}
+	vector<T>&& eval() {
+		return move(v);
 	}
 };
+
+// Helper function
+template <class T>
+BaseStream<T> Stream(const vector<T> &v) {
+	return BaseStream<T>(v);
+}
 
 /**
  * Stream as a composition: internal stream + action to perform on that stream
@@ -34,8 +41,8 @@ class CompoundStream {
 	Stream s;
 	Action a;
 public:
-	CompoundStream(Stream s, Action a) : s(s), a(a) {}
-	vector<int> eval() {
+	CompoundStream(const Stream &s, const Action &a) : s(s), a(a) {}
+	auto eval() {
 		return a.apply(s.eval());
 	}
 };
@@ -49,8 +56,9 @@ class FilterStream {
 public:
 	FilterStream(Predicate pred) :  pred(pred) {}
 
-	vector<int> apply(vector<int> v) {
-		vector<int> output;
+	template<class T>
+	auto apply(const vector<T> &v) {
+		vector<T>  output;
 		copy_if(v.begin(), v.end(), back_inserter(output), pred);
 		return output;
 	}
@@ -70,8 +78,10 @@ class MapStream {
 	Operation op;
 public:
 	MapStream(Operation op) : op(op) {}
-	vector<int> apply(vector<int> v) {
-		vector<int> output (v.size());
+
+	template<class T, class ReturnType = result_of_t<Operation(T)>>
+	auto apply(const vector<T> &v) {
+		vector<ReturnType> output (v.size());
 		transform(v.begin(), v.end(), output.begin(), op);
 		return output;
 	}
@@ -92,7 +102,9 @@ class ForEachStream {
 	Operation op;
 public:
 	ForEachStream(Operation op) : op(op) {}
-	vector<int> apply(vector<int> v) {
+
+	template<class T>
+	auto apply(const vector<T> &v) {
 		for_each(v.begin(), v.end(), op);
 		return v;
 	}
@@ -122,8 +134,8 @@ int main() {
 	auto stream =
 		Stream(v)
 		| Filter([](int i) { return i % 2 == 1; })
-		| Map([](int i) { return i * 10; })
-		| ForEach([](int i) { cout << i << endl; });
+		| Map([](int i) { return to_string(i) + " is an odd number"; })
+		| ForEach([](string s) { cout << s << endl;});
 
 	// all the operations on stream are applied just here
 	stream.eval();
