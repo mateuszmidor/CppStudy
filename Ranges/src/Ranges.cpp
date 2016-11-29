@@ -71,6 +71,32 @@ FilterStream<Predicate> Filter(Predicate p) {
 }
 
 /**
+ * Stream operation: Sort
+ */
+class Sort {
+public:
+	template<class T>
+	auto apply(const vector<T> &v) {
+		vector<T>  output(v);
+		sort(output.begin(), output.end(), [](string s1, string s2) { return s1 > s2;});
+		return output;
+	}
+};
+
+/**
+ * Stream operation: Limit
+ */
+class Limit {
+	unsigned count;
+public:
+	Limit(unsigned count) : count(count) {}
+	template<class T>
+	auto apply(const vector<T> &v) {
+		return vector<T>(v.begin(), v.begin() + count);
+	}
+};
+
+/**
  * Stream operation: Map
  */
 template <class Operation>
@@ -129,16 +155,41 @@ auto operator | (const Stream &s, const Action& a) {
  * Application entry point
  */
 int main() {
+	// 1. work with integers
 	vector<int> v { 1, 2, 3, 4, 5};
-
-	auto stream =
+	auto istream =
 		Stream(v)
 		| Filter([](int i) { return i % 2 == 1; })
 		| Map([](int i) { return to_string(i) + " is an odd number"; })
 		| ForEach([](string s) { cout << s << endl;});
 
 	// all the operations on stream are applied just here
-	stream.eval();
+	istream.eval();
+
+
+	// 2. work with characters
+	vector<char> c { 'a', 'b', 'c', 'd', 'e' };
+	auto cstream=
+		Stream(c)
+		| Limit(3)
+		| Map([](char c) { return toupper(c);})
+		| ForEach([](char c) { cout << c << endl;});
+
+	cstream.eval();
+
+
+	// 3. work with strings
+	vector<string> s { "lois", "bart", "sanders"};
+	auto charToUpper = [](char c) { return toupper(c); };
+	auto strToUpper = [charToUpper](string s) { transform(s.begin(), s.end(), s.begin(), charToUpper); return s;};
+	auto sstream=
+		Stream(s)
+		| Map(strToUpper)
+		| Sort()
+		| ForEach([](string s) { cout << s << endl;});
+
+	sstream.eval();
+
 
 	return 0;
 }
