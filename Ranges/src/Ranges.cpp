@@ -79,7 +79,7 @@ public:
 	auto apply(const vector<T> &v) {
 		vector<T>  output(v);
 		sort(output.begin(), output.end(), [](string s1, string s2) { return s1 > s2;});
-		return output;
+		return (output);
 	}
 };
 
@@ -150,11 +150,53 @@ auto operator | (const Stream &s, const Action& a) {
 	return CompoundStream<Stream, Action>(s, a);
 }
 
+/**
+ * Stream operation: Exec
+ */
+class Exec {
+
+};
+template <class Stream>
+void operator| ( Stream &&s, Exec&& ) {
+	s.eval();
+}
 
 /**
  * Application entry point
  */
 int main() {
+	vector<string> cchannels { "POP", "ROCK", "BLUES" };
+	vector<string> nchannels { "POP", "BLUES", "CHRISTIAN" };
+
+	// 1. remove channels
+	auto is_channel_to_be_removed = [&] (const auto& s) { return find(nchannels.begin(), nchannels.end(), s) == nchannels.end();};
+	auto channel_to_iterator = [&](const auto& s) { return find(cchannels.begin(), cchannels.end(), s); };
+	auto remove_channel = [&](const auto& i) { cchannels.erase(i); };
+
+	Stream(cchannels)
+	| Filter ( is_channel_to_be_removed )
+	| Map    ( channel_to_iterator )
+	| ForEach( remove_channel )
+	| Exec();
+
+	// 2. add new channels
+	auto should_add_channel = [&] (const string& s) { return find(cchannels.begin(), cchannels.end(), s) == cchannels.end();};
+	auto add_channel = [&](const string& s) { cchannels.push_back(s); };
+	Stream(nchannels)
+	| Filter( should_add_channel )
+	| ForEach( add_channel )
+	| Exec();
+
+	// 3. printout channels
+	auto print = [] (const string& s) { cout << s << " " << endl; };
+	Stream(cchannels)
+	| Sort()
+	| ForEach( print )
+	| Exec();
+
+
+
+
 	// 1. work with integers
 	vector<int> v { 1, 2, 3, 4, 5};
 	auto istream =
