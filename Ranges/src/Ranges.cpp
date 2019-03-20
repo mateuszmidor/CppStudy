@@ -97,7 +97,7 @@ public:
 };
 
 /**
- * Stream operation: Map
+ * Stream operation: Map, to be used with functors and standalone functions
  */
 template <class Operation>
 class MapStream {
@@ -121,7 +121,7 @@ MapStream<Operation> Map(Operation op) {
 }
 
 /**
- * Stream operation: MemberMap; to be used with class member functions like MemberMap(&Person::getName)
+ * Stream operation: Map; to be used with class member functions like Map(Person::getName)
  */
 template <class FPTR>
 class MemberMapStream {
@@ -141,10 +141,9 @@ public:
 };
 
 // Helper function
-template <class FPTR>
-MemberMapStream<FPTR> MemberMap(FPTR fptr) {
+template <class FuncRet, class Obj, class FPTR = FuncRet (Obj::*)() const>
+MemberMapStream<FPTR> Map(FuncRet (Obj::*fptr)() const) {
 	return MemberMapStream<FPTR>(fptr);
-
 }
 
 //template <class FuncRet, class... FuncArgs, class Obj>
@@ -276,7 +275,7 @@ int main() {
 	vector<Person> people { {"Iza", 21}, {"Ela", 44},  {"Werka", 24} };
 	Stream(people)
 	| Filter([](const Person& p) { return p.age < 35;})
-	| MemberMap(&Person::getName)
+	| Map(Person::getName)
 	| ForEach(print)
 	| Exec();
 
