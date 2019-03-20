@@ -121,6 +121,38 @@ MapStream<Operation> Map(Operation op) {
 }
 
 /**
+ * Stream operation: MemberMap; to be used with class member functions like MemberMap(&Person::getName)
+ */
+template <class FPTR>
+class MemberMapStream {
+	FPTR fptr;
+public:
+	MemberMapStream(FPTR fptr) : fptr(fptr) {}
+
+	template<class T, class ReturnType = std::result_of_t<decltype(fptr)(T)>>
+	auto apply(const vector<T> &v) {
+		vector<ReturnType> output;
+		output.reserve(v.size());
+		for (const auto &item : v)
+			output.push_back((item.*fptr)());
+
+		return output;
+	}
+};
+
+// Helper function
+template <class FPTR>
+MemberMapStream<FPTR> MemberMap(FPTR fptr) {
+	return MemberMapStream<FPTR>(fptr);
+
+}
+
+//template <class FuncRet, class... FuncArgs, class Obj>
+//auto run_this_guy(FuncRet (Obj::*fptr)(FuncArgs...), Obj& obj) {
+//   return [&obj, fptr](FuncArgs...args) { return (obj.*fptr)(args...); };
+//}
+
+/**
  * Stream operation: ForEach
  */
 template <class Operation>
@@ -188,7 +220,7 @@ int main() {
 	| Exec();
 
 	// 3. printout channels
-	auto print = [] (const string& s) { cout << s << " " << endl; };
+	auto print = [] (const auto& s) { cout << s << " " << endl; };
 	Stream(cchannels)
 	| Sort()
 	| ForEach( print )
@@ -232,6 +264,21 @@ int main() {
 
 	sstream.eval();
 
+
+	// 4. work with structures
+	struct Person {
+		string name;
+		int age;
+
+		string getName() const { return name; }
+		int getAge() const { return age; }
+	};
+	vector<Person> people { {"Iza", 21}, {"Ela", 44},  {"Werka", 24} };
+	Stream(people)
+	| Filter([](const Person& p) { return p.age < 35;})
+	| MemberMap(&Person::getName)
+	| ForEach(print)
+	| Exec();
 
 	return 0;
 }
