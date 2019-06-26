@@ -269,13 +269,18 @@ int main() {
 		string name;
 		int age;
 
-		string getName() const { return name; }
-		int getAge() const { return age; }
+		string get_name() const { return name; }
+		int get_age() const { return age; }
+
+		static auto younger_than(int age) { return [age](const Person& p) { return p.get_age() < age; }; }
+		static auto older_than(int age) { return [age](const Person& p) { return p.get_age() > age; }; }
 	};
-	vector<Person> people { {"Iza", 21}, {"Ela", 44},  {"Werka", 24} };
+	
+	vector<Person> people { {"Iza", 19}, {"Ela", 44},  {"Werka", 24} };
 	Stream(people)
-	| Filter([](const Person& p) { return p.age < 35;})
-	| Map(Person::getName)
+	| Filter(Person::younger_than(35))
+	| Filter(Person::older_than(21))
+	| Map(Person::get_name)
 	| ForEach(print)
 	| Exec();
 
